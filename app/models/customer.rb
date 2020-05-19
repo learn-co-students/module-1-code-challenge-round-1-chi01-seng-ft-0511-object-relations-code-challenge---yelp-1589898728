@@ -21,12 +21,16 @@ class Customer
 
   def num_reviews
     #Returns the total number of reviews that a customer has authored
-    Reviews.self.map do |each_review|
-      
+    # num_of_reviews = Review.all.select do |each_review|
+    #   each_review
+    # end
+    # num_of_reviews.count
+    # didn't have enough time to finish the logic
   end
 
   def self.find_by_name(name)
   #given a string of a **full name**, returns the **first customer** whose full name matches
+    
   end
 
   def self.find_all_by_given_name(name)
