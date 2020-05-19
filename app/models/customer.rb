@@ -24,13 +24,20 @@ class Customer
 
   #provides all reviews written by a customer instance
   def reviews 
-    Review.all.select do |review|
+    my_reviews = Review.all.select do |review|
       review.customer == self 
     end 
+    if my_reviews == []
+      return "You haven't written any reviews!"
+    end
+      my_reviews  
   end 
 
   #provides a unique list of all restaurants visited by a customer instance
   def restaurants 
+    if reviews == "You haven't written any reviews!"
+      return reviews 
+    end 
     my_restaurants = reviews.map do |review|
       review.restaurant 
     end 

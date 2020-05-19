@@ -18,13 +18,20 @@ class Restaurant
 
   #provides all reviews for a restaurant instance
   def reviews 
-    Review.all.select do |review|
+    my_reviews = Review.all.select do |review|
       review.restaurant == self 
     end 
+    if my_reviews == []
+      return "There are currently no reviews for this restaurant."
+    end 
+    my_reviews 
   end 
 
   #provides unique array of all customers for a restaurant instance
   def customers 
+    if reviews == "There are currently no reviews for this restaurant."
+      return "No customers have reviewed this restaurant."
+    end 
     my_customers = reviews.map do |review|
       review.customer 
     end 
@@ -34,6 +41,9 @@ class Restaurant
   #provides the average star rating (rounded two decimal places) for 
   #a restaurant instance
   def average_star_rating 
+    if customers == "No customers have reviewed this restaurant."
+      return customers 
+    end
     my_ratings = reviews.map do |review|
       review.rating
     end 
