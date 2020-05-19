@@ -9,4 +9,14 @@ class Customer
   def full_name
     "#{given_name} #{family_name}"
   end
+
+
+  def name(given_name)
+    "#{given_name}"
+  end
+
+
+
+
+
 end
