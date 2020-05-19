@@ -1,5 +1,5 @@
 class Review
-  attr_accessor :customer, :restaurant, :rating
+  attr_reader :customer, :restaurant, :rating
   @@all = []
   def initialize(customer, restaurant, rating)
     @customer = customer
@@ -8,12 +8,16 @@ class Review
     @@all << self
   end
 
-  def restaurant_rating
-    @rating
-  def
-
   def self.all
     @@all
+  end
+
+  def customer_review(customer)
+    #returns the customer object for that review
+  end
+
+  def restaurant_review(review)
+    #returns the restaurant object for that given review
   end
 
 end
