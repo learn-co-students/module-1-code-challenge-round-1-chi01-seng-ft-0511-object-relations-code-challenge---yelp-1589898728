@@ -42,6 +42,27 @@ Deliverables use the notation `#` for instance methods, and `.` for class method
 
 Some of the methods listed are provided to you in the starter code. You should check that they work correctly, and that you understand them.
 
+
+### Domain Model ###
+
+* What are my models?
+  - Restaurant
+  - Customer
+  - Review
+* What does my schema look like?
+  - Customer
+    - given_name (Str)
+    - family_name (Str)
+  - Restaurant
+    - name (Str)
+  - Review
+    - customer (Instance)
+    - restaurant (Instance)
+    - rating (Int)
+* What is the relationship between my models?
+
+Customer --------<Review>-------- Restaurant
+
 ### Initializers, Readers, and Writers
 
 #### Customer
