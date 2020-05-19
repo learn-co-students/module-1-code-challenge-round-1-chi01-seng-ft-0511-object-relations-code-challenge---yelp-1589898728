@@ -9,16 +9,19 @@ class Restaurant
     @@all << self 
   end
 
+  #provides a list of all restaurant instances
   def self.all
     @@all 
   end 
 
+  #provides all reviews for a restaurant instance
   def reviews 
     Review.all.select do |review|
       review.restaurant == self 
     end 
   end 
 
+  #provides unique array of all customers for a restaurant instance
   def customers 
     my_customers = reviews.map do |review|
       review.customer 
@@ -26,6 +29,8 @@ class Restaurant
     my_customers.uniq 
   end
 
+  #provides the average star rating (rounded two decimal places) for 
+  #a restaurant instance
   def average_star_rating 
     my_ratings = reviews.map do |review|
       review.rating

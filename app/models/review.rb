@@ -12,6 +12,7 @@ class Review
         @@all << self 
     end
     
+    #provides a list of all review instances
     def self.all 
         @@all 
     end 
