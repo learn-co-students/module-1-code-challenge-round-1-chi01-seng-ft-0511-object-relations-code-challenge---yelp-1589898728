@@ -30,7 +30,7 @@ class Restaurant
     my_ratings = reviews.map do |review|
       review.rating
     end 
-    my_ratings.sum / my_ratings.count 
+    (my_ratings.sum.to_f / my_ratings.count).round(2)
   end 
 
 end
