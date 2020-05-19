@@ -22,6 +22,10 @@ review_b = Review.new(customer_b, restaurant_a, 2)
 review_c = Review.new(customer_c, restaurant_b, 3)
 review_d = Review.new(customer_d, restaurant_c, 4)
 review_e = Review.new(customer_e, restaurant_c, 1)
+review_f = Review.new(customer_e, restaurant_a, 1)
+review_g = Review.new(customer_e, restaurant_b, 5)
+review_h = Review.new(customer_a, restaurant_b, 5)
+review_h = Review.new(customer_b, restaurant_b, 5)
 
 
 

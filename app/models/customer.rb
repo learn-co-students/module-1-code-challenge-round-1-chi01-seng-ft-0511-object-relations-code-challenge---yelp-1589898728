@@ -9,6 +9,8 @@ class Customer
     @@all << self
   end
 
+  # Methods
+
   def self.all
     @@all
   end
@@ -41,5 +43,14 @@ class Customer
     self.all.select {|customer| customer.given_name == given_name}
   end
 
+  # Returns the customer with the most reviews given
+  def self.most_active
+    self.all.max_by {|customer| customer.num_reviews}
+  end
+
+  # Returns the top three most active reviewers
+  def self.top_three
+    self.all.max_by(3) {|customer| customer.num_reviews}
+  end
 
 end

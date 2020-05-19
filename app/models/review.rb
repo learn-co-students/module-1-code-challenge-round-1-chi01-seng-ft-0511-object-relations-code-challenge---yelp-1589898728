@@ -16,4 +16,9 @@ class Review
     @@all
   end
 
+  # returns the first review ever
+  def self.first_review
+    Review.all.first 
+  end
+
 end
