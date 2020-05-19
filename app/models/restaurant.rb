@@ -3,6 +3,8 @@ class Restaurant
 
   @@all = []
 
+  #initializes a new restaurant instance with a name
+  #and pushes the instance into a class variable array of all restaurants
   def initialize(name)
     @name = name
 

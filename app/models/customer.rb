@@ -3,6 +3,8 @@ class Customer
 
   @@all = []
 
+  #initializes a new customer instance with a given name and family name
+  #and pushes the instance into a class variable array of all customers
   def initialize(given_name, family_name)
     @given_name = given_name
     @family_name  = family_name
